@@ -1,0 +1,250 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background: 
+    url('./deer.svg') top 35px right no-repeat, 
+    url('./present-box.svg') bottom 10px left 8px no-repeat,
+    url('./stars.svg') bottom 6px right 5px no-repeat,
+    url('./stars_bg.svg') center no-repeat,
+    #255B4A;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 800px;
+  margin: 36px auto;
+  & .finish {
+    display: none;
+  }
+  &--finished {
+    & .finish {
+      display: block;
+    }
+    & .cookies {
+      display: none;
+    }
+  }
+}
+
+.header {
+  display: flex;
+  &__logo-container {
+    flex: 0 178px;
+  }
+  &__logo {
+    width: 163px;
+  }
+  &__title {
+    font-size: 21px;
+    line-height: 20px;
+    text-align: right;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+  }
+}
+
+.cookies {
+  &__container {
+    height: 462px;
+    background: rgba(255, 238, 231, 0.51);
+    border-radius: 5px;
+    margin-top: 19px;
+  }
+}
+
+.buttons {
+  &__container {
+    display: flex;
+    height: 53px;
+    margin-top: 16px;
+  }
+  &__block:not(:last-child) {
+    margin-right: 31px;
+  }
+}
+
+.button {
+  border: none;
+  cursor: pointer;
+  &--again {
+    background: #FF803B;
+    border-radius: 5px;
+    width: 163px;
+    height: 53px;
+    line-height: 53px;
+    font-size: 18px;
+    color: #fff;
+    text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden;
+    &:hover {
+      background-color: #CE500C;
+    }
+  }
+  &--vk,
+  &--fb {
+    background-color: #fff;
+    width: 36px;
+    height: 34px;
+    display: block;
+    background: url('./fb_button.svg') center no-repeat;
+  }
+  &--vk {
+    background: url('./vk_button.svg') center no-repeat;
+  }
+  &--tree {
+    width: 69px;
+    height: 53px;
+    border-radius: 5px;
+    background: url('./tree_button.svg') center no-repeat #FF803B;
+    &:hover {
+      background-color: #CE500C;
+    }
+  }
+}
+
+.share {
+  width: 254px;
+  height: 53px;
+  line-height: 53px;
+  background: #CC323A;
+  border-radius: 5px;
+  padding: 0 10px 0 20px;
+  color: #fff;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  &:hover {
+    background-color: #9C282E;
+  }
+}
+
+.cookies {
+  position: relative;
+  width: 800px;
+  height: 462px;
+  background: rgba(255, 238, 231, 0.51);
+  border-radius: 5px;
+  margin-top: 19px;
+  &.hidden {
+    display: none;
+  }
+}
+
+.cookie {
+  position: absolute;
+  //width: 264px;
+  //height: 164px;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  &:before {
+    content: '';
+    width: 264px;
+    height: 164px;
+    position: absolute;
+    z-index: -1;
+    left: calc(50% - 132px);
+    top: calc(50% - 82px);
+    background: url('./stars_hover.svg') center no-repeat;
+    opacity: 0;
+    transition-duration: .3s;
+  }
+  &:hover:before {
+    opacity: 1;
+  }
+  &--1 {
+    background-image: url('./cookie1.svg');
+    width: 98px;
+    height: 110px;
+    top: 90px;
+    left: 94px;
+  }
+  &--2 {
+    background-image: url('./cookie2.svg');
+    width: 200px;
+    height: 140px;
+    top: 56px;
+    left: 304px;
+  }
+  &--3 {
+    background-image: url('./cookie3.svg');
+    width: 105px;
+    height: 112px;
+    top: 70px;
+    right: 69px;
+  }
+  &--4 {
+    background-image: url('./cookie4.svg');
+    width: 243px;
+    height: 143px;
+    bottom: 49px;
+    left: 61px;
+  }
+  &--5 {
+    background-image: url('./cookie5.svg');
+    width: 265px;
+    height: 133px;
+    bottom: 49px;
+    right: 50px;
+  }
+}
+
+.message {
+  width: calc(100% - 10px);
+  max-width: 906px;
+  background: #FFEEE7;
+  padding: 29px 110px;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 25px;
+  color: #CC323A;
+  text-align: center;
+  &__container {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-duration: .3s;
+    opacity: 1;
+  }
+}
+
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.finish {
+  width: 800px;
+  height: 462px;
+  background: #FFEEE7;
+  border-radius: 5px;
+  position: relative;
+  margin-top: 19px;
+  padding: 90px 55px;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 25px;
+  color: #255B4A;
+}
+.text-center {
+  text-align: center;
+}
