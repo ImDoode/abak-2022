@@ -1,4 +1,8 @@
-const ROOT_DIR = '' || location.origin;
+let locationDir = location.href.split('/');
+if (locationDir[locationDir.length-1] === 'index.html') {
+  locationDir.pop()
+}
+const ROOT_DIR = '' || locationDir.join('/').concat('/');
 
 const messages = [
   'Ваша прибыль взлетит выше самых смелых ожиданий',
