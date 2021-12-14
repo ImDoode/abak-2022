@@ -92,6 +92,7 @@ body {
   text-transform: uppercase;
   white-space: nowrap;
   overflow: hidden;
+  margin-right: 31px;
 }
 
 .button--again:hover {
@@ -194,34 +195,76 @@ body {
 
 .cookie--2 {
   background-image: url("./cookie2.svg");
-  width: 200px;
-  height: 140px;
-  top: 56px;
+  width: 96px;
+  height: 82px;
+  top: 115px;
   left: 304px;
 }
 
 .cookie--3 {
   background-image: url("./cookie3.svg");
+  width: 135px;
+  height: 132px;
+  top: 56px;
+  left: 369px;
+}
+
+.cookie--4 {
+  background-image: url("./cookie4.svg");
   width: 105px;
   height: 112px;
   top: 70px;
   right: 69px;
 }
 
-.cookie--4 {
-  background-image: url("./cookie4.svg");
-  width: 243px;
-  height: 143px;
+.cookie--5 {
+  background-image: url("./cookie5.svg");
+  width: 145px;
+  height: 133px;
   bottom: 49px;
   left: 61px;
 }
 
-.cookie--5 {
-  background-image: url("./cookie5.svg");
-  width: 265px;
-  height: 133px;
-  bottom: 49px;
+.cookie--6 {
+  background-image: url("./cookie6.svg");
+  width: 112px;
+  height: 131px;
+  bottom: 50px;
+  left: 193px;
+}
+
+.cookie--7 {
+  background-image: url("./cookie7.svg");
+  width: 125px;
+  height: 131px;
+  bottom: 51px;
+  right: 190px;
+}
+
+.cookie--8 {
+  background-image: url("./cookie8.svg");
+  width: 134px;
+  height: 123px;
+  bottom: 51px;
   right: 50px;
+}
+
+.hearts {
+  position: absolute;
+  width: 26px;
+  height: 37px;
+  left: 190px;
+  bottom: 156px;
+  background: url("./cookie_heart.svg") center no-repeat;
+}
+
+.distance {
+  position: absolute;
+  width: 85px;
+  height: 10px;
+  bottom: 49px;
+  right: 145px;
+  background: url("./cookie_distance.svg") center no-repeat;
 }
 
 .message {
@@ -234,6 +277,8 @@ body {
   line-height: 25px;
   color: #CC323A;
   text-align: center;
+  position: absolute;
+  top: 280px;
 }
 
 .message__container {
@@ -254,18 +299,13 @@ body {
   -webkit-transition-duration: .3s;
           transition-duration: .3s;
   opacity: 1;
-  background: rgba(0, 0, 0, 0.3);
-}
-
-.hidden {
-  opacity: 0;
   pointer-events: none;
 }
 
 .finish {
   width: 800px;
   height: 462px;
-  background: #FFEEE7;
+  background: url("./finish_bg.svg") center, url("./finish_tree.svg") right 53px bottom 52px no-repeat #FFEEE7;
   border-radius: 5px;
   position: relative;
   margin-top: 19px;
@@ -278,5 +318,14 @@ body {
 
 .text-center {
   text-align: center;
+}
+
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.dn {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */
