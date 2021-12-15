@@ -2,7 +2,7 @@ let locationDir = location.href.split('/');
 if (locationDir[locationDir.length-1] === 'index.html') {
   locationDir.pop()
 }
-const ROOT_DIR = '' || locationDir.join('/').concat('/');
+const ROOT_DIR = '' || locationDir.join('/');
 
 const messages = [
   'Ваша прибыль взлетит выше самых смелых ожиданий',
@@ -68,7 +68,6 @@ window.onload = () => {
   $finish.addEventListener('click', () => {
     document.querySelector('.js-wrapper').classList.add('wrapper--finished');
     $finish.classList.add('dn');
-    $again.classList.remove('dn');
     hideMessage();
     setShareImage('finish');
     
@@ -76,7 +75,6 @@ window.onload = () => {
   $again.addEventListener('click', () => {
     document.querySelector('.js-wrapper').classList.remove('wrapper--finished');
     $finish.classList.remove('dn');
-    $again.classList.add('dn');
     hideMessage();
     setShareImage('main');
   });
