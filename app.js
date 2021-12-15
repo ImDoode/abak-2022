@@ -30,6 +30,8 @@ const $finish = document.querySelector('.js-finish');
 const $again = document.querySelector('.js-again');
 const $socialFb = document.querySelector('.js-social-fb');
 const $socialVk = document.querySelector('.js-social-vk');
+const $deer = document.querySelector('.js-deer');
+let deerShowTimeout;
 let shareImage = '';
 
 
@@ -61,9 +63,16 @@ const hideMessage = (event) => {
 
 window.onload = () => {
   setShareImage();
-  document.querySelectorAll('.js-cookie').forEach($item =>
+  document.querySelectorAll('.js-cookie').forEach($item => {
     $item.addEventListener('click', () => showRandomMessage())
-  );
+    $item.addEventListener('mousemove', () => {
+      $deer.classList.add('hide');
+      clearTimeout(deerShowTimeout);
+      deerShowTimeout = setTimeout(() => {
+        $deer.classList.remove('hide');
+      }, Math.random()*2000 + 500)
+    });
+  });
   $messageContainer.addEventListener('click', hideMessage);
   $finish.addEventListener('click', () => {
     document.querySelector('.js-wrapper').classList.add('wrapper--finished');
