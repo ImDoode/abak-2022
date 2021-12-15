@@ -65,13 +65,6 @@ window.onload = () => {
   setShareImage();
   document.querySelectorAll('.js-cookie').forEach($item => {
     $item.addEventListener('click', () => showRandomMessage())
-    $item.addEventListener('mousemove', () => {
-      $deer.classList.add('hide');
-      clearTimeout(deerShowTimeout);
-      deerShowTimeout = setTimeout(() => {
-        $deer.classList.remove('hide');
-      }, Math.random()*2000 + 500)
-    });
   });
   $messageContainer.addEventListener('click', hideMessage);
   $finish.addEventListener('click', () => {
@@ -86,6 +79,13 @@ window.onload = () => {
     $finish.classList.remove('dn');
     hideMessage();
     setShareImage('main');
+  });
+  $deer.addEventListener('mousemove', () => {
+    $deer.classList.add('hide');
+    clearTimeout(deerShowTimeout);
+    deerShowTimeout = setTimeout(() => {
+      $deer.classList.remove('hide');
+    }, Math.random()*2000 + 500)
   });
 
 }

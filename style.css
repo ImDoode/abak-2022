@@ -18,18 +18,18 @@ body {
 
 .deer {
   position: fixed;
-  z-index: -1;
   right: 0;
-  top: 35px;
-  width: 159px;
-  height: 207px;
-  background: url("./deer.svg") center no-repeat;
+  top: 17px;
+  width: 200px;
+  height: 250px;
+  background: url("./deer.svg") right no-repeat;
   -webkit-transition-duration: 1s;
           transition-duration: 1s;
 }
 
 .deer.hide {
-  right: -159px;
+  right: -200px;
+  width: 400px;
 }
 
 .wrapper {
