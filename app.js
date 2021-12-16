@@ -85,7 +85,7 @@ window.onload = () => {
     clearTimeout(deerShowTimeout);
     deerShowTimeout = setTimeout(() => {
       $deer.classList.remove('hide');
-    }, Math.random()*2000 + 500)
+    }, 1000);
   });
 
 }
